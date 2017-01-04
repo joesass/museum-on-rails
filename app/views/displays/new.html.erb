@@ -1,0 +1,24 @@
+<h2>Add a New Display:</h2>
+<%= form_for @display do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+
+  <h3>Who's the Artist?</h3>
+
+
+  <% @artists.each do |artist| %>
+    <%= f.radio_button :artist_id, artist.id %>
+    <%= f.label "artist_id_#{artist.id}", artist.name %>
+  <% end %><br><br>
+  <%= link_to 'create a new artist here', new_artist_path %><br><br>
+
+  <h3>What's the Medium?</h3>
+
+  <% @media.each do |medium| %>
+    <%= f.radio_button :medium_id, medium.id %>
+    <%= f.label "medium_id_#{medium.id}", medium.name %>
+  <% end %><br><br>
+  <%= link_to 'create a new medium here', new_medium_path %><br><br>
+
+  <%= f.submit %>
+<% end %>

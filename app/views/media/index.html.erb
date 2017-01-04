@@ -1,0 +1,5 @@
+<ul>
+<% @media.each do |medium| %>
+  <li><%=  link_to medium.name, medium_path(medium) %></li>
+<% end %>
+</ul>

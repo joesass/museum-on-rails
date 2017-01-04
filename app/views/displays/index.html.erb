@@ -1,0 +1,5 @@
+<ul>
+<% @displays.each do |display| %>
+  <li><%=  link_to display.title, display_path(display) %></li>
+<% end %>
+</ul>

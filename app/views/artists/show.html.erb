@@ -1,0 +1,13 @@
+<h2><%= @artist.name %></h2>
+<h3>Displays: </h3>
+<ul>
+  <% @artist.displays.each do |display| %>
+    <li><%= display.title %></li>
+  <% end %>
+</ul>
+<h3>Media: </h3>
+<ul>
+  <% @artist.media.each do |medium| %>
+    <li><%= medium.name %></li>
+  <% end %>
+</ul>

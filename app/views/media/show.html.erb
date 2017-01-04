@@ -1,0 +1,7 @@
+<h2><%= @medium.name %></h2>
+<h3>Artists</h3>
+<ul>
+  <% @medium.artists.each do |artist| %>
+    <li><%= artist.name %></li>
+  <% end %>
+</ul>
